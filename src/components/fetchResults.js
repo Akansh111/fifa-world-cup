@@ -4,7 +4,7 @@ import { fetchResultsPending, fetchResultsSuccess, fetchResultsError } from "../
 function fetchResults(text) {
     return dispatch => {
         dispatch(fetchResultsPending());
-        fetch(`http://worldcup.sfg.io/matches/country?fifa_code=${text}`)
+        fetch(`https://worldcup.sfg.io/matches/country?fifa_code=${text}`)
             .then(res => res.json())
             .then(res => {
                 if (res.error) {
